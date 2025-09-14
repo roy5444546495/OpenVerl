@@ -4,7 +4,7 @@ NOW=$(date +%Y%m%d)
 export WANDB_DIR=gsm8k-grpo-lora-qwen2.5-0.5b-${NOW}
 export WANDB_PROJECT=${WANDB_DIR}
 export WANDB_EXP=0.5b-${NOW}
-MODEL_PATH=Qwen/Qwen2.5-0.5B-Instruct
+MODEL_PATH=/root/qwen2.5-0.5b-instruct
 
 set -x
 nproc_per_gpu=116
