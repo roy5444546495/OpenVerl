@@ -4,7 +4,7 @@ NOW=$(date +%Y%m%d)
 export WANDB_DIR=gsm8k-grpo-lora-qwen2.5-0.5b-${NOW}
 export WANDB_PROJECT=${WANDB_DIR}
 export WANDB_EXP=0.5b-${NOW}
-MODEL_PATH=Qwen/Qwen2.5-0.5B-Instruct
+MODEL_PATH=/root/OpenVerl/Qwen/Qwen2.5-0.5B-Instruct
 
 set -x
 nproc_per_gpu=116
@@ -15,8 +15,8 @@ mini_batch_size=$(( total_procs ))
 
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
-    data.train_files=data/gsm8k/train.parquet \
-    data.val_files=data/gsm8k/test.parquet \
+    data.train_files=/root/OpenVerl/data/gsm8k/train.parquet \
+    data.val_files=/root/OpenVerl/data/gsm8k/test.parquet \
     data.train_batch_size=${total_procs} \
     data.val_batch_size=${total_procs} \
     data.max_prompt_length=512 \
