@@ -15,8 +15,8 @@ mini_batch_size=$(( total_procs ))
 
 python3 -m verl.trainer.main_ppo \
     algorithm.adv_estimator=grpo \
-    data.train_files=data/gsm8k/train.parquet \
-    data.val_files=data/gsm8k/test.parquet \
+    data.train_files=/root/OpenVerl/verl/math/train.parquet \
+    data.val_files=/root/OpenVerl/verl/math/test.parquet \
     data.train_batch_size=${total_procs} \
     data.val_batch_size=${total_procs} \
     data.max_prompt_length=512 \
