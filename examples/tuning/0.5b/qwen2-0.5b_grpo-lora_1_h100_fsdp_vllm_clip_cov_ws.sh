@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 NOW=$(date +%Y%m%d)
-export WANDB_DIR=gsm8k-grpo-lora-qwen2.5-0.5b-${NOW}
+export WANDB_DIR=gsm8k-grpo-lora-qwen2.5-0.5b-${NOW}-ws
 export WANDB_PROJECT=${WANDB_DIR}
 export WANDB_EXP=0.5b-${NOW}
 MODEL_PATH=/root/qwen2.5-0.5b-instruct
